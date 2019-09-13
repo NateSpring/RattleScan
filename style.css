@@ -3,10 +3,9 @@
 
  /* Optional: Makes the sample page fill the window. */
 
- html, body {
+body {
      height: 100%;
      margin: 0;
-     padding: 5px;
      background-image: url('/media/fields.jpg');
      background-attachment: fixed;
  }
@@ -30,30 +29,35 @@
      height: auto;
      color: blue;
      margin: auto;
+     
  }
 
  .maincontainer {
-     display: block;
+     display: flex;
+     justify-content: space-evenly;
+     position: relative;
      width: 100%;
-     height: 100%;
-     padding: 0;
-     margin: 0;
+     height: 90vh;
+     padding-bottom: 5px;
+     margin: 0 auto;
  }
 
  #info {
-     font-size: 2em;
+     font-size: 1.5em;
+     width: 100%;
+     height: 60%;
      text-align: center;
-     color: beige;
-     background-color: tan;
+     color: #f5f5dc;
+     background-color: rgba(245, 245, 220, .55);
      border-radius: 5px;
-     border-top: 4px solid black;
-     margin: 0;
+     box-shadow: 2px 2px 7px black;
+     margin: 10px auto;
      text-shadow: 2px 2px black;
  }
 
  .input {
      width: 50%;
-     height: 7.5%;
+     height: 15%;
      border: 2px solid black;
      font-size: 1.5em;
      text-align: center;
@@ -63,30 +67,28 @@
  #map {
      height: 60%;
      width: 100%;
-     border: 4px solid black;
- }
-
- .mediablock {
-     display: grid;
-     width: 100%;
-     background-color: tan;
-     text-align: center;
-     justify-items: center;
- }
- .mediablock > img{
-     width: 50%;
-     height: auto;
-     border-radius: 7px;
+     border-radius: 5px;
+    box-shadow: 2px 2px 7px black;
+     margin: 10px auto;
  }
 
  footer {
      text-align: center;
-     font-size: 2em;
+     font-size: 1em;
+     background-color: black;
+     color: white;
+     width: 100%;
+     padding: 5px;
+     bottom: 0;
+     position: absolute;
+     
  }
 
- @media only screen and (max-width: 600px) {
-     #map {
-         float: none;
-         width: 100%;
-     }
+ @media only screen and (max-width: 800px) {
+    .maincontainer {
+        display: flex;
+        flex-direction: column;
+        padding: 5px;
+    } 
+   
  }
